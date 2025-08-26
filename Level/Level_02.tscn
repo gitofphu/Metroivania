@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Level/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemies/BossEnemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemies/Spikes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://DoorConnections/01_link_02.tres" type="Resource" id=5]
+[ext_resource path="res://Level/Level_02.gd" type="Script" id=6]
+[ext_resource path="res://World/TileMap.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/Trigger.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 30 )
+
+[node name="Level_02" instance=ExtResource( 1 )]
+script = ExtResource( 6 )
+
+[node name="TileMap" parent="." index="0"]
+tile_data = PoolIntArray( -65538, 0, 0, -65537, 0, 1, -131072, 0, 1, -131071, 0, 1, -131070, 0, 1, -131069, 0, 1, -131068, 0, 1, -131067, 0, 1, -131066, 0, 1, -131065, 0, 1, -131064, 0, 1, -131063, 0, 1, -131062, 0, 1, -131061, 0, 1, -131060, 0, 1, -131059, 0, 1, -131058, 0, 1, -131057, 0, 1, -131056, 0, 1, -131055, 0, 1, -131054, 0, 1, -131053, 0, 1, -131052, 0, 1, -131051, 0, 2, -2, 0, 65536, -1, 0, 65537, -65536, 0, 65537, -65535, 0, 65541, -65534, 0, 131073, -65533, 0, 131073, -65532, 0, 131073, -65531, 0, 131073, -65530, 0, 131073, -65529, 0, 131073, -65528, 0, 131073, -65527, 0, 131073, -65526, 0, 131073, -65525, 0, 131073, -65524, 0, 131073, -65523, 0, 65542, -65522, 0, 65541, -65521, 0, 131073, -65520, 0, 131073, -65519, 0, 65542, -65518, 0, 65537, -65517, 0, 65537, -65516, 0, 65537, -65515, 0, 65538, 65534, 0, 65536, 65535, 0, 65537, 0, 0, 65541, 1, 0, 131074, 13, 0, 131072, 14, 0, 131074, 17, 0, 131072, 18, 0, 65542, 19, 0, 65537, 20, 0, 65537, 21, 0, 65538, 131070, 0, 65536, 131071, 0, 65541, 65536, 0, 131074, 65554, 0, 131072, 65555, 0, 65542, 65556, 0, 65537, 65557, 0, 65538, 196606, 0, 65540, 196607, 0, 131074, 131091, 0, 131072, 131092, 0, 65542, 131093, 0, 65538, 262142, 0, 65539, 196628, 0, 65536, 196629, 0, 65538, 327678, 0, 65539, 262164, 0, 65536, 262165, 0, 65538, 393214, 0, 65539, 327700, 0, 65536, 327701, 0, 65538, 458750, 0, 131075, 393236, 0, 65536, 393237, 0, 65538, 458772, 0, 65536, 458773, 0, 65538, 524294, 0, 0, 524295, 0, 2, 524298, 0, 3, 524308, 0, 65536, 524309, 0, 65538, 655358, 0, 0, 655359, 0, 1, 589824, 0, 1, 589825, 0, 2, 589828, 0, 196608, 589829, 0, 196609, 589830, 0, 196614, 589831, 0, 196613, 589832, 0, 196609, 589833, 0, 196609, 589834, 0, 196615, 589844, 0, 65536, 589845, 0, 65538, 720894, 0, 65536, 720895, 0, 65537, 655360, 0, 65537, 655361, 0, 65538, 655373, 0, 0, 655374, 0, 2, 655377, 0, 0, 655378, 0, 2, 655380, 0, 65536, 655381, 0, 65538, 786430, 0, 65536, 786431, 0, 65537, 720896, 0, 65537, 720897, 0, 131077, 720898, 0, 1, 720899, 0, 1, 720900, 0, 1, 720901, 0, 1, 720902, 0, 1, 720903, 0, 1, 720904, 0, 1, 720905, 0, 1, 720906, 0, 1, 720907, 0, 1, 720908, 0, 1, 720909, 0, 131078, 720910, 0, 131077, 720911, 0, 1, 720912, 0, 1, 720913, 0, 131078, 720914, 0, 131077, 720915, 0, 1, 720916, 0, 131078, 720917, 0, 65538, 851966, 0, 131072, 851967, 0, 131073, 786432, 0, 131073, 786433, 0, 131073, 786434, 0, 131073, 786435, 0, 131073, 786436, 0, 131073, 786437, 0, 131073, 786438, 0, 131073, 786439, 0, 131073, 786440, 0, 131073, 786441, 0, 131073, 786442, 0, 131073, 786443, 0, 131073, 786444, 0, 131073, 786445, 0, 131073, 786446, 0, 131073, 786447, 0, 131073, 786448, 0, 131073, 786449, 0, 131073, 786450, 0, 131073, 786451, 0, 131073, 786452, 0, 131073, 786453, 0, 131074 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BossEnemy" parent="." index="1" instance=ExtResource( 2 )]
+position = Vector2( 115, 45 )
+
+[node name="SpikeCollection" type="Node2D" parent="." index="2"]
+
+[node name="Spikes" parent="SpikeCollection" index="0" instance=ExtResource( 3 )]
+position = Vector2( 32, 160 )
+
+[node name="Spikes2" parent="SpikeCollection" index="1" instance=ExtResource( 3 )]
+position = Vector2( 128, 128 )
+
+[node name="Spikes19" parent="SpikeCollection" index="2" instance=ExtResource( 3 )]
+position = Vector2( 144, 128 )
+
+[node name="Spikes18" parent="SpikeCollection" index="3" instance=ExtResource( 3 )]
+position = Vector2( 80, 128 )
+
+[node name="Spikes3" parent="SpikeCollection" index="4" instance=ExtResource( 3 )]
+position = Vector2( 240, 160 )
+
+[node name="Spikes4" parent="SpikeCollection" index="5" instance=ExtResource( 3 )]
+position = Vector2( 256, 160 )
+
+[node name="Spikes5" parent="SpikeCollection" index="6" instance=ExtResource( 3 )]
+position = Vector2( 304, 65 )
+rotation = -1.5708
+
+[node name="Spikes6" parent="SpikeCollection" index="7" instance=ExtResource( 3 )]
+position = Vector2( 304, 81 )
+rotation = -1.5708
+
+[node name="Spikes7" parent="SpikeCollection" index="8" instance=ExtResource( 3 )]
+position = Vector2( 304, 97 )
+rotation = -1.5708
+
+[node name="Spikes8" parent="SpikeCollection" index="9" instance=ExtResource( 3 )]
+position = Vector2( 288, 48 )
+rotation = -1.5708
+
+[node name="Spikes9" parent="SpikeCollection" index="10" instance=ExtResource( 3 )]
+position = Vector2( 272, 32 )
+rotation = -1.5708
+
+[node name="Spikes10" parent="SpikeCollection" index="11" instance=ExtResource( 3 )]
+position = Vector2( 256, 16 )
+rotation = -1.5708
+
+[node name="Spikes11" parent="SpikeCollection" index="12" instance=ExtResource( 3 )]
+position = Vector2( 48, 0 )
+rotation = 1.5708
+
+[node name="Spikes12" parent="SpikeCollection" index="13" instance=ExtResource( 3 )]
+position = Vector2( 32, 16 )
+rotation = 1.5708
+
+[node name="Spikes13" parent="SpikeCollection" index="14" instance=ExtResource( 3 )]
+position = Vector2( 16, 32 )
+rotation = 1.5708
+
+[node name="Spikes14" parent="SpikeCollection" index="15" instance=ExtResource( 3 )]
+position = Vector2( 0, 48 )
+rotation = 1.5708
+
+[node name="Spikes15" parent="SpikeCollection" index="16" instance=ExtResource( 3 )]
+position = Vector2( 0, 65 )
+rotation = 1.5708
+
+[node name="Spikes16" parent="SpikeCollection" index="17" instance=ExtResource( 3 )]
+position = Vector2( 0, 80 )
+rotation = 1.5708
+
+[node name="Spikes17" parent="SpikeCollection" index="18" instance=ExtResource( 3 )]
+position = Vector2( 0, 96 )
+rotation = 1.5708
+
+[node name="Door" parent="." index="3" instance=ExtResource( 4 )]
+position = Vector2( -23, 128 )
+scale = Vector2( -1, 1 )
+connection = ExtResource( 5 )
+new_level_path = "res://Level/Level_01.tscn"
+
+[node name="Trigger" parent="." index="4" instance=ExtResource( 8 )]
+position = Vector2( 0, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" parent="Trigger" index="0"]
+shape = SubResource( 1 )
+
+[node name="BlockDoor" parent="." index="5" instance=ExtResource( 7 )]
+visible = false
+collision_layer = 0
+tile_data = PoolIntArray( 524286, 0, 3, 589822, 0, 131075 )
+
+[connection signal="died" from="BossEnemy" to="." method="_on_BossEnemy_died"]
+[connection signal="area_triggered" from="Trigger" to="." method="_on_Trigger_area_triggered"]
+[connection signal="body_entered" from="Trigger" to="Trigger" method="_on_Trigger_body_entered"]
+
+[editable path="Trigger"]
